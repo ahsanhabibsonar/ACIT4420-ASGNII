@@ -5,7 +5,7 @@ from morning_greetings.message_generator import generate_message
 
 def test_contacts_manager():
     # Initialize the ContactsManager with the sample CSV file
-    manager = ContactsManager('contacts.csv')
+    manager = ContactsManager('csv_file/contacts.csv')
     
     # Test list_contacts method (Initial state)
     print("\nInitial contacts list:")
@@ -14,28 +14,29 @@ def test_contacts_manager():
         print(contact)
 
     # Add new contact and test add_contact
-    print("\nAdding a new contact (Ahsan)...")
-    manager.add_contact('Ahsan', 'ahsan@example.com', '06:00 AM')
+    print("\nAdding a new contact (Ashirah)...")
+    manager.add_contact('Ashirah', 'ashirah@example.com', '07:00 AM')
     
     # List contacts after adding
-    print("\nContacts list after adding David:")
+    print("\nContacts list after adding Ashirah:")
     contacts = manager.list_contacts()
     for contact in contacts:
         print(contact)
 
     # Remove a contact and test remove_contact
-    print("\nRemoving a contact (Bob)...")
-    manager.remove_contact('Bob')
+    print("\nRemoving a contact (Alice)...")
+    manager.remove_contact('Alice')
     
     # List contacts after removing
-    print("\nContacts list after removing Bob:")
+    print("\nUpdated contacts list: ")
     contacts = manager.list_contacts()
     for contact in contacts:
         print(contact)
 
 def test_generate_message():
-    name= 'Noah'
-    message = generate_message(name)
+    name= 'Leila'
+    preferred_time= '07:00 AM'
+    message = generate_message(name,preferred_time)
     print(message)
 
 def test_send_message():
@@ -46,7 +47,7 @@ def test_send_message():
         result = send_message(email, message)
         #print(f"Result of send message:{result}")
         if result:
-            print(f"Successfully sent message to {email}.")
+            print(f"Message sending OK.")
         else:
             print(f"Failed to send message to {email}.")
     except ValueError as e:
@@ -70,8 +71,8 @@ def test_logger():
 
 # Run the test function
 if __name__ == "__main__":
-    #test_contacts_manager()
-    #test_generate_message()
+    test_contacts_manager()
+    test_generate_message()
     test_send_message()
     test_logger()
     

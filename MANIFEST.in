@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include setup.py
+include test.py
+include message_log.txt
+recursive-include csv_files *.csv  # Include CSV files from the new folder
+

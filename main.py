@@ -10,7 +10,7 @@ from morning_greetings.logger import log_message
 
 def main():
     # Initialize the contacts manager
-    contact_manager = ContactsManager('csv_file')
+    contact_manager = ContactsManager('csv_file/contacts.csv')
     
     # Load contacts from the CSV file or start with an empty list
     contacts = contact_manager.get_contacts()
@@ -27,7 +27,7 @@ def main():
 
     # Send a message to each contact
     for contact in contacts:
-        message = generate_message(contact['name'])
+        message = generate_message(contact['name'],contact['preferred_time'])
         email = contact['email'] # Extract  the email
         send_message(email, message) # Send message using the email
         log_message(contact, message) # log the message

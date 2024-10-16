@@ -15,12 +15,12 @@ def post_install():
 setup(
     name='morning_greetings',
     version='0.1.0',  # Update the version number as needed
-    author='Your Name',
-    author_email='your_email@example.com',
+    author='Ahsan Habib Sonar',
+    author_email='ahson6184@oslomet.no',
     description='A Python package for sending morning greetings',
     long_description=read_file('README.md'),  # Assumes you have a README.md file
     long_description_content_type='text/markdown',
-    url='https://github.com/yourusername/morning_greetings',  # Update with your repository URL
+    url='https://github.com/ahsanhabibsonar/ACIT4420-ASGNII',  # Update with your repository URL
     packages=find_packages(),  # Automatically find all packages and sub-packages
     install_requires=[
         # Add any dependencies your package needs here

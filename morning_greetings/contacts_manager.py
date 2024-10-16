@@ -57,7 +57,7 @@ class ContactsManager:
              self._write_contacts_to_csv()
              print(f"contact removed{name}")
         else:
-             print(f"No contact found with the name{name}")    
+             print(f"No contact found with the name {name}")    
         
     def get_contacts(self):
             return self.contacts
