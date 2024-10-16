@@ -1,0 +1,19 @@
+# Ignore __pycache__ directories
+__pycache__/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+
+# Ignore virtual environment directories (if using one)
+venv/
+env/
+
+# Ignore system files (optional)
+.DS_Store
+Thumbs.db
+
+# Ignore any other files you don't want to push
+message_log.txt
+csv_file
+
